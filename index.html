@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./assets/Logo.png">
+    </header>
+    <main>
+        <section class="mensaje">
+            
+            <textarea class="mensaje__campo__texto" placeholder="Ingrese el texto aqui"></textarea>
+            
+            <div class="informacion">
+                <img class="icono" src="./assets/bi_exclamation-circle-fill.png" alt="información"><p class="mensaje__informacion"> Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="botones">
+                <button type="button" class="boton__encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button type="button" class="boton__desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        
+        </section>
+        <section class="resultado">
+            <div id="resultado__campo__vacio" class="resultado__campo__vacio">
+                <img class="resultado__campo__vacio__muneco" src="./assets/muneco.png" alt="Imagen de muñeco explorando">
+                <p class="resultado__campo__vacio__destaque">Ningún mensaje fue encontrado</p>
+                <p class="resultado__campo__vacio__regular">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div id="resultado__campo__texto" class="resultado__campo__texto" style="display: none;">
+                <textarea class="resultado__campo__texto__encriptado" readonly="true"></textarea>
+                <button type="button" class="boton__copiar" onclick="copiarMensaje()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./scripts/script.js"></script>
+
+</body></html>
